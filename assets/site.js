@@ -1,4 +1,4 @@
-// Dosher Fitness demo — live clock, schedule board, menu, form.
+// Dosher Fitness demo — live clock, schedule board, menu.
 (function () {
   var TZ = 'America/New_York';
   var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -144,37 +144,12 @@
   nav.addEventListener('click', function (e) { if (e.target.tagName === 'A') closeMenu(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('open')) { closeMenu(); btn.focus(); } });
 
-  // ---- form (demo: hands off to the visitor's email app)
-  var form = document.getElementById('contact-form');
-  var status = document.getElementById('form-status');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var bad = null;
-    ['f-name', 'f-email'].forEach(function (id) {
-      var el = document.getElementById(id);
-      var ok = el.value.trim() && el.checkValidity();
-      el.setAttribute('aria-invalid', ok ? 'false' : 'true');
-      if (!ok && !bad) bad = el;
-    });
-    if (bad) {
-      status.className = 'form-status err';
-      status.textContent = 'Please add your name and a valid email.';
-      bad.focus();
-      return;
-    }
-    var f = form.elements;
-    var body = 'Name: ' + f.name.value + '\nPhone: ' + f.phone.value + '\nEmail: ' + f.email.value + '\nInterested in: ' + f.interest.value + '\n\n' + f.message.value;
-    window.location.href = 'mailto:dosherfitness@gmail.com?subject=' + encodeURIComponent('Website question: ' + f.interest.value) + '&body=' + encodeURIComponent(body);
-    status.className = 'form-status ok';
-    status.textContent = 'Opening your email app. Prefer to talk? Call (910) 540-3161.';
-  });
-
   // ---- scroll reveal
   if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
     }, { rootMargin: '0px 0px -10% 0px' });
-    document.querySelectorAll('.card, .gym-photos, .coach-photo, .quotes figure, .stats li, .form').forEach(function (el, i) {
+    document.querySelectorAll('.card, .gym-photos, .coach-photo, .quotes figure, .stats li, .reach').forEach(function (el, i) {
       el.classList.add('reveal');
       el.style.transitionDelay = (i % 4) * 70 + 'ms';
       io.observe(el);
