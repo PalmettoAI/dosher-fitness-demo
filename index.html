@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap">
 <link rel="preload" as="image" href="assets/img/youth-mat-room.webp">
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/site.css?v=3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -252,41 +252,44 @@
 </section>
 
 <section class="visit" id="visit" aria-labelledby="visit-h">
-  <div class="wrap visit-grid">
-    <div class="visit-info">
-      <p class="eyebrow">07 / Visit</p>
-      <h2 id="visit-h">Stop by. Any hour.</h2>
+  <div class="wrap">
+    <div class="visit-head">
+      <div>
+        <p class="eyebrow">07 / Visit</p>
+        <h2 id="visit-h">Stop by. Any hour.</h2>
+      </div>
       <p>Stop by today and talk to one of our qualified instructors. They can craft a fitness plan just for you. We want to see you soon!</p>
-      <dl class="contact">
-        <div><dt>Gym hours</dt><dd>24 hours, 7 days a week</dd></div>
-        <div><dt>Class hours</dt><dd><a href="#schedule">See the weekly schedule</a></dd></div>
-      </dl>
-      <p class="area">Serving Supply, Holden Beach, Shallotte, Sunset Beach and all of Brunswick County.</p>
+    </div>
+
+    <div class="visit-grid">
+      <div class="reach" aria-labelledby="reach-h">
+        <h3 id="reach-h">Reach us directly</h3>
+        <a class="reach-row reach-call" href="tel:+19105403161">
+          <span class="reach-label">Call or text</span>
+          <span class="reach-value">(910) 540-3161</span>
+        </a>
+        <a class="reach-row" href="mailto:dosherfitness@gmail.com">
+          <span class="reach-label">Email</span>
+          <span class="reach-value">dosherfitness@gmail.com</span>
+        </a>
+        <a class="reach-row" href="https://www.facebook.com/HBMartialArts/" target="_blank" rel="noopener">
+          <span class="reach-label">Message us</span>
+          <span class="reach-value">Facebook</span>
+        </a>
+        <a class="reach-row" href="https://maps.google.com/?q=2869+Holden+Beach+Rd,+Supply,+NC+28462" target="_blank" rel="noopener">
+          <span class="reach-label">Address</span>
+          <span class="reach-value">2869 Holden Beach Rd, Supply, NC 28462</span>
+        </a>
+        <dl class="hours">
+          <div><dt>Gym</dt><dd>Open 24/7</dd></div>
+          <div><dt>Classes</dt><dd><a href="#schedule">See schedule</a></dd></div>
+        </dl>
+      </div>
       <div class="map">
         <iframe title="Map to Dosher Fitness at 2869 Holden Beach Rd, Supply NC" src="https://maps.google.com/maps?q=2869%20Holden%20Beach%20Rd%2C%20Supply%2C%20NC%2028462&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
-
-    <div class="reach" aria-labelledby="reach-h">
-      <h3 id="reach-h">Questions? Reach us directly.</h3>
-      <p class="fine">Call or text for the fastest answer. Ask about memberships, class times, youth programs or personal training.</p>
-      <a class="reach-row reach-call" href="tel:+19105403161">
-        <span class="reach-label">Call or text</span>
-        <span class="reach-value">(910) 540-3161</span>
-      </a>
-      <a class="reach-row" href="mailto:dosherfitness@gmail.com">
-        <span class="reach-label">Email</span>
-        <span class="reach-value">dosherfitness@gmail.com</span>
-      </a>
-      <a class="reach-row" href="https://www.facebook.com/HBMartialArts/" target="_blank" rel="noopener">
-        <span class="reach-label">Message us</span>
-        <span class="reach-value">Facebook</span>
-      </a>
-      <a class="reach-row" href="https://maps.google.com/?q=2869+Holden+Beach+Rd,+Supply,+NC+28462" target="_blank" rel="noopener">
-        <span class="reach-label">Stop by, any hour</span>
-        <span class="reach-value">2869 Holden Beach Rd</span>
-      </a>
-    </div>
+    <p class="area">Serving Supply, Holden Beach, Shallotte, Sunset Beach and all of Brunswick County.</p>
   </div>
 </section>
 
@@ -309,6 +312,6 @@
   <a href="#schedule"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V9h14z"/></svg>Classes</a>
 </nav>
 
-<script src="assets/site.js" defer></script>
+<script src="assets/site.js?v=3" defer></script>
 </body>
 </html>
